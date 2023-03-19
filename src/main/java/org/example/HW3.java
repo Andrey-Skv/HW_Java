@@ -37,6 +37,7 @@ public class HW3 {
     }
 
 
+
     private static void findMinMaxAverage() {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i <= 10; i++) {
