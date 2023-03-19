@@ -65,19 +65,19 @@ public class HW5 {
 
         Map<String, Integer> nameCountMap = new HashMap<>();
 
-        // count the number of occurrences of each first name
+
         for (String employee : employees) {
             String firstName = employee.split(" ")[0];
             nameCountMap.put(firstName, nameCountMap.getOrDefault(firstName, 0) + 1);
         }
 
-        // create an array of names sorted by the number of occurrences
+
         String[] sortedNames = nameCountMap.entrySet().stream()
                 .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
                 .map(Map.Entry::getKey)
                 .toArray(String[]::new);
 
-        // print the sorted names with their counts
+
         for (String firstName : sortedNames) {
             int count = nameCountMap.get(firstName);
             if (count > 1) {
