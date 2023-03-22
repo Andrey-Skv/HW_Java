@@ -70,6 +70,7 @@ public class HW5 {
             String firstName = employee.split(" ")[0];
             nameCountMap.put(firstName, nameCountMap.getOrDefault(firstName, 0) + 1);
         }
+        System.out.println(nameCountMap);
 
 
         String[] sortedNames = nameCountMap.entrySet().stream()
@@ -88,7 +89,7 @@ public class HW5 {
 
 
     private static void phoneBooks() {
-            HashMap<String, ArrayList<String>> phoneBook = new HashMap<>();
+            Map<String, ArrayList<String>> phoneBook = new HashMap<>();
             Scanner scanner = new Scanner(System.in);
 
 
@@ -130,5 +131,5 @@ public class HW5 {
                     System.out.println("Неверная команда");
                 }
             }
-        }
-        }
+    }
+}
